@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: typescript-repository-pattern
+    image: typescript-repository-pattern:latest
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: 'development'
+      PORT: 3000
+      DATABASE_URL: 'mysql://mysqluser:mysqlPassword@127.0.0.1:3306/database_name'
+      JWT_SECRET_KEY: 'A2b104pDyz0PNLJg8FP0jGateeSMsW6sLbk6trttgsFydw0A10NYHD6'
+      JWT_EXPIRES_IN: 300
+      JWT_REFRESH_TOKEN_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9eyJpZCI6MywiZW1haWwiOiJhaHNpbi5h'
+      JWT_REFRESH_EXPIRES_IN: 86400
